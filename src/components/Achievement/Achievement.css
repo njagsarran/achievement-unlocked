@@ -1,5 +1,10 @@
-.button {
-  font-size: 36px;
-  padding: 36px;
-  border-radius: 24px;
+.wrapper {
+  background-color: #3b3f40;
+  border-radius: 72px;
+  color: white;
+  font-size: 40px;
+  padding: 20px;
+  padding-left: 40px;
+  width: 700px;
+  text-align: left;
 }

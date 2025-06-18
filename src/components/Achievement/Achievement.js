@@ -1,12 +1,14 @@
 import React from 'react';
-import './Button.css';
+import './Achievement.css';
 
-const Button = ({ label, onClick }) => {
+const Achievement = ({ name, value }) => {
   return (
-    <button className="button" onClick={onClick}>
-      {label}
-    </button>
+    <div className="wrapper">
+      Achievement Unlocked
+      <br/>
+      {`${value}G - ${name}`}
+    </div>
   );
 };
 
-export default Button;
+export default Achievement;
