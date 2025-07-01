@@ -14,12 +14,13 @@ const cloudUserName = process.env.MONGO_USERNAME;
 const clousPassword = process.env.MONGO_PASSWORD;
 const cloudURL = `mongodb+srv://${cloudUserName}:${clousPassword}@test-cluster.r2auwtz.mongodb.net/testDatabase?retryWrites=true&w=majority&appName=test-cluster`;
 
-const Achievements = require('./models/Achievement');
-
 mongoose.connect(cloudURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  ssl: true,
 });
+
+const Achievements = require('./models/Achievement');
 
 app.get('/api/achievements', async (req, res) => {
   const achievements = await Achievements.find();
