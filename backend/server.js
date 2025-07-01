@@ -6,9 +6,17 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+require('dotenv').config();
+
+const localURL = 'mongodb://localhost:27017/local';
+
+const cloudUserName = process.env.MONGO_USERNAME;
+const clousPassword = process.env.MONGO_PASSWORD;
+const cloudURL = `mongodb+srv://${cloudUserName}:${clousPassword}@test-cluster.r2auwtz.mongodb.net/testDatabase?retryWrites=true&w=majority&appName=test-cluster`;
+
 const Achievements = require('./models/Achievement');
 
-mongoose.connect('mongodb://localhost:27017/local', {
+mongoose.connect(cloudURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
