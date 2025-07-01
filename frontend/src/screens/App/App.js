@@ -4,9 +4,11 @@ import { Achievement, Button } from '../../components';
 
 const App = () => {
   const [achievements, setAchievements] = useState([]);
+  const localBackend = 'http://localhost:5000';
+  const cloudBackend = 'https://achievement-unlocked.onrender.com';
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/achievements')
+    fetch(`${cloudBackend}/api/achievements`)
       .then(res => res.json())
       .then(data => setAchievements(data))
       .catch(err => console.error('Error fetching achievements:', err));
