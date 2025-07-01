@@ -1,12 +1,12 @@
 import React from 'react';
 import './Achievement.css';
 
-const Achievement = ({ name, value }) => {
+const Achievement = ({ description, title, value }) => {
   return (
     <div className="wrapper">
-      Achievement Unlocked
+      {`Achievement Unlocked: ${title}`}
       <br/>
-      {`${value}G - ${name}`}
+      {`${value}G - ${description}`}
     </div>
   );
 };
