@@ -31,8 +31,9 @@ const UnlockAchievement = () => {
     <div className={styles.wrapper}>
       <div style={{ padding: 10 }} />
       <Button
-        disabled={achievementVisible}
+        achievementVisible={achievementVisible}
         label="Unlock Achievement"
+        loading={loading}
         onClick={showAchievement}
       />
       <div style={{ marginTop: '20px' }} />
