@@ -1,4 +1,4 @@
-$size: 120px;
+$size: 100px;
 
 $indicatorBorderSize: 8px;
 $inactivePlayerIndicatorSize: calc($size - 2 * $indicatorBorderSize);
@@ -10,16 +10,17 @@ $lineTransformThickness: calc(($size - $lineThickness) / 2);
 $lineLength: calc($size - $indicatorBorderSize);
 $lineTransformLength: calc($indicatorBorderSize / 2);
 
-$logoBackgroundMargin: 20px;
+$logoBackgroundMargin: 18px;
 $logoBackgroundSize: calc($size - 2 * $logoBackgroundMargin); 
 
-$logoBorder: 6px;
+$logoBorder: 4px;
 $logoMargin: calc($logoBackgroundMargin + $logoBorder);
 $logoSize: calc($size - 2 * $logoMargin);
 
 .wrapper {
   background-color: #000000;
   border-radius: 50%;
+  margin-right: 16px;
   width: $size;
   height: $size;
   z-index: 0;
