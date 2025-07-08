@@ -3,7 +3,7 @@ $font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
 
 :root {
   --fade-in-time: 0.3s;
-  --hold-time: 2s;
+  --hold-time: 5s;
   --fade-out-time: 0.3s;
   --fade-out-delay: calc(var(--fade-in-time) + var(--hold-time));
 }

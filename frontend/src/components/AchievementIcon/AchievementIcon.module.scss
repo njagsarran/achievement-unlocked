@@ -1,0 +1,103 @@
+$size: 120px;
+
+$indicatorBorderSize: 8px;
+$inactivePlayerIndicatorSize: calc($size - 2 * $indicatorBorderSize);
+$activePlayerIndicatorSize: calc($size / 2 - $indicatorBorderSize);
+
+$lineThickness: 12px;
+$lineTransformThickness: calc(($size - $lineThickness) / 2);
+
+$lineLength: calc($size - $indicatorBorderSize);
+$lineTransformLength: calc($indicatorBorderSize / 2);
+
+$logoBackgroundMargin: 20px;
+$logoBackgroundSize: calc($size - 2 * $logoBackgroundMargin); 
+
+$logoBorder: 6px;
+$logoMargin: calc($logoBackgroundMargin + $logoBorder);
+$logoSize: calc($size - 2 * $logoMargin);
+
+.wrapper {
+  background-color: #000000;
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  z-index: 0;
+}
+
+.playerIndicators {
+  background-color: #555555;
+  border-radius: 50%;
+
+  position: absolute;
+  z-index: 10;
+  width: $inactivePlayerIndicatorSize;
+  height: $inactivePlayerIndicatorSize;
+
+  margin-left: $indicatorBorderSize;
+  margin-top: $indicatorBorderSize;
+}
+
+.activePlayerIndicator {
+  background-color: #009507;
+
+  position: absolute;
+  z-index: 20;
+  width: $activePlayerIndicatorSize;
+  height: $activePlayerIndicatorSize;
+
+  border-radius: $activePlayerIndicatorSize 0 0 0;
+  -moz-border-radius: $activePlayerIndicatorSize 0 0 0;
+  -webkit-border-radius: $activePlayerIndicatorSize 0 0 0;
+
+  margin-left: $indicatorBorderSize;
+  margin-top: $indicatorBorderSize;
+}
+
+.horizontalLine {
+  background-color: #000000;
+  width: $lineLength;
+  height: $lineThickness;
+
+  position: absolute;
+  z-index: 30;
+
+  margin-left: $lineTransformLength;
+  margin-top: $lineTransformThickness;
+}
+
+.verticalLine {
+  background-color: #000000;
+  width: $lineThickness;
+  height: $lineLength;
+
+  position: absolute;
+  z-index: 30;
+
+  margin-left: $lineTransformThickness;
+  margin-top: $lineTransformLength;
+}
+
+.logoBackground {
+  background-color: #000000;
+  border-radius: 50%;
+  width: $logoBackgroundSize;
+  height: $logoBackgroundSize;
+
+  position: absolute;
+  z-index: 40;
+
+  margin-left: $logoBackgroundMargin;
+  margin-top: $logoBackgroundMargin;
+}
+
+.logo {
+  width: $logoSize;
+  height: $logoSize;
+
+  position: absolute;
+  z-index: 40;
+
+  margin-left: $logoMargin;
+  margin-top: $logoMargin;
+}
