@@ -5,6 +5,9 @@ import { useAchievements } from '../../hooks';
 import { getAchievementShowTime, playAchievementSound } from '../../utils';
 
 const UnlockAchievement = () => {
+  const [achievementVisible, setAchievementVisible] = useState(false);
+  const [currentAchievement, setCurrentAchievement] = useState();
+
   const { achievements, loading } = useAchievements();
 
   console.log('loading', loading);
@@ -24,13 +27,11 @@ const UnlockAchievement = () => {
     }, achievementShowTime);
   }
 
-  const [achievementVisible, setAchievementVisible] = useState(false);
-  const [currentAchievement, setCurrentAchievement] = useState();
-
   return (
     <div className={styles.wrapper}>
       <div style={{ padding: 10 }} />
       <Button
+        disabled={achievementVisible}
         label="Unlock Achievement"
         onClick={showAchievement}
       />
