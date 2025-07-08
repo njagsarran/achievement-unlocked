@@ -1,10 +1,42 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
 .wrapper {
+  animation-name: fadeInUp, fadeOutDown;
+  animation-duration: var(--fade-in-time), var(--fade-out-time);
+  animation-timing-function: ease-out, ease-in;
+  animation-delay: 0s, var(--fade-out-delay);
+  animation-fill-mode: forwards;
+
   background-color: #3b3f40;
   border-radius: 72px;
   color: white;
+  
   font-size: 40px;
+  max-width: 700px;
   padding: 20px;
   padding-left: 40px;
-  width: 700px;
+  position: fixed;
+  
+  margin-top: 350px;
   text-align: left;
 }
