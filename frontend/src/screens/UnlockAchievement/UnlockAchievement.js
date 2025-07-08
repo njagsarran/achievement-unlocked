@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styles from './UnlockAchievement.module.scss';
 import { Achievement, Button } from '../../components';
 import { useAchievements } from '../../hooks';
-import achievementSound from '../../assets/achievementUnlocked.mp3';
+import { getAchievementShowTime, playAchievementSound } from '../../utils';
 
 const UnlockAchievement = () => {
   const { achievements, loading } = useAchievements();
@@ -10,35 +10,22 @@ const UnlockAchievement = () => {
   console.log('loading', loading);
   console.log('achievements', achievements);
 
-  const [achievementVisible, setAchievementVisible] = useState(false);
-  const [currentAchievement, setCurrentAchievement] = useState();
-
-  function getCSSVarTimeMs(name) {
-    const stringValue = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
-    const floatValue = parseFloat(stringValue);
-    return floatValue * (stringValue.includes('ms') ? 1 : 1000);
-  }
-
-  const fadeInTime = getCSSVarTimeMs('--fade-in-time');
-  const holdTime = getCSSVarTimeMs('--hold-time');
-  const fadeOutTime = getCSSVarTimeMs('--fade-out-time');
-  
-  const totalDuration = fadeInTime + holdTime + fadeOutTime;
+  const achievementShowTime = getAchievementShowTime();
 
   const showAchievement = () => {
     const randomIndex = Math.floor(Math.random() * achievements.length);
     setCurrentAchievement(achievements[randomIndex]);
     setAchievementVisible(true);
 
-    const audio = new Audio(achievementSound);
-    audio.play().catch((e) => {
-      console.error('Audio play failed:', e);
-    });
+    playAchievementSound();
 
     setTimeout(() => {
       setAchievementVisible(false);
-    }, totalDuration);
+    }, achievementShowTime);
   }
+
+  const [achievementVisible, setAchievementVisible] = useState(false);
+  const [currentAchievement, setCurrentAchievement] = useState();
 
   return (
     <div className={styles.wrapper}>
