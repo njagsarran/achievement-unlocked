@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/achievement-unlocked/static/css/main.bd795414.css",
-    "main.js": "/achievement-unlocked/static/js/main.f5223b07.js",
+    "main.css": "/achievement-unlocked/static/css/main.cbddb3a9.css",
+    "main.js": "/achievement-unlocked/static/js/main.8ce55dc2.js",
     "static/js/453.e03ce847.chunk.js": "/achievement-unlocked/static/js/453.e03ce847.chunk.js",
+    "static/media/xbox360Logo.png": "/achievement-unlocked/static/media/xbox360Logo.22a27c7b5b3c5083a382.png",
     "static/media/achievementUnlocked.mp3": "/achievement-unlocked/static/media/achievementUnlocked.cbd74d4c93c67488b671.mp3",
     "index.html": "/achievement-unlocked/index.html",
-    "main.bd795414.css.map": "/achievement-unlocked/static/css/main.bd795414.css.map",
-    "main.f5223b07.js.map": "/achievement-unlocked/static/js/main.f5223b07.js.map",
+    "main.cbddb3a9.css.map": "/achievement-unlocked/static/css/main.cbddb3a9.css.map",
+    "main.8ce55dc2.js.map": "/achievement-unlocked/static/js/main.8ce55dc2.js.map",
     "453.e03ce847.chunk.js.map": "/achievement-unlocked/static/js/453.e03ce847.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd795414.css",
-    "static/js/main.f5223b07.js"
+    "static/css/main.cbddb3a9.css",
+    "static/js/main.8ce55dc2.js"
   ]
 }
