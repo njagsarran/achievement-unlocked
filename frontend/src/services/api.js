@@ -2,7 +2,7 @@ const LOCAL_URL = 'http://localhost:5000';
 const CLOUD_URL = 'https://achievement-unlocked.onrender.com';
 
 export async function getAchievements() {
-  const res = await fetch(`${LOCAL_URL}/api/achievements`);
+  const res = await fetch(`${CLOUD_URL}/api/achievements`);
   if (!res.ok) {
     throw new Error('Failed to fetch achievements');
   }
