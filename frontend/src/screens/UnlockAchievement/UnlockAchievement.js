@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './UnlockAchievement.module.scss';
 import { Achievement, Button } from '../../components';
 import { useAchievements } from '../../hooks';
+import achievementSound from '../../assets/achievementUnlocked.mp3';
 
 const UnlockAchievement = () => {
   const { achievements, loading } = useAchievements();
@@ -28,6 +29,11 @@ const UnlockAchievement = () => {
     const randomIndex = Math.floor(Math.random() * achievements.length);
     setCurrentAchievement(achievements[randomIndex]);
     setAchievementVisible(true);
+
+    const audio = new Audio(achievementSound);
+    audio.play().catch((e) => {
+      console.error('Audio play failed:', e);
+    });
 
     setTimeout(() => {
       setAchievementVisible(false);
