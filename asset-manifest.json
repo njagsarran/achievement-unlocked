@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/achievement-unlocked/static/css/main.e7454b5d.css",
-    "main.js": "/achievement-unlocked/static/js/main.bef619ec.js",
+    "main.js": "/achievement-unlocked/static/js/main.cc025749.js",
     "static/js/453.e03ce847.chunk.js": "/achievement-unlocked/static/js/453.e03ce847.chunk.js",
     "index.html": "/achievement-unlocked/index.html",
     "main.e7454b5d.css.map": "/achievement-unlocked/static/css/main.e7454b5d.css.map",
-    "main.bef619ec.js.map": "/achievement-unlocked/static/js/main.bef619ec.js.map",
+    "main.cc025749.js.map": "/achievement-unlocked/static/js/main.cc025749.js.map",
     "453.e03ce847.chunk.js.map": "/achievement-unlocked/static/js/453.e03ce847.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e7454b5d.css",
-    "static/js/main.bef619ec.js"
+    "static/js/main.cc025749.js"
   ]
 }
