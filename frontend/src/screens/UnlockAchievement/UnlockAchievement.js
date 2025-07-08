@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import './App.css';
+import './UnlockAchievement.css';
 import { Achievement, Button } from '../../components';
 import { useAchievements } from '../../hooks';
 
-const App = () => {
-
+const UnlockAchievement = () => {
   const { achievements, loading } = useAchievements();
 
   console.log('loading', loading);
@@ -14,7 +13,7 @@ const App = () => {
   const [currentAchievement, setCurrentAchievement] = useState();
 
   return (
-    <div className="App">
+    <div className="UnlockAchievement">
       <div style={{ padding: 10 }} />
       <Button
         label="Unlock Achievement"
@@ -31,4 +30,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default UnlockAchievement;

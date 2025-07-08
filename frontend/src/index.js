@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import { App } from './screens';
+import { UnlockAchievement, ViewAchievements } from './screens';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Routes>
+        <Route path="/" element={<UnlockAchievement />} />
+        <Route path="/achievements" element={<ViewAchievements />} />
+      </Routes>
+    </Router>
   </React.StrictMode>
 );
 
