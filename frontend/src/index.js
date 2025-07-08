@@ -10,7 +10,7 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/" element={<UnlockAchievement />} />
+        <Route path="/achievement-unlocked" element={<UnlockAchievement />} />
         <Route path="/achievements" element={<ViewAchievements />} />
       </Routes>
     </Router>
