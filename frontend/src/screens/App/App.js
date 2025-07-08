@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import { useState } from 'react';
 import './App.css';
 import { Achievement, Button } from '../../components';
+import { useAchievements } from '../../hooks';
 
 const App = () => {
-  const [achievements, setAchievements] = useState([]);
-  const localBackend = 'http://localhost:5000';
-  const cloudBackend = 'https://achievement-unlocked.onrender.com';
 
-  useEffect(() => {
-    fetch(`${cloudBackend}/api/achievements`)
-      .then(res => res.json())
-      .then(data => setAchievements(data))
-      .catch(err => console.error('Error fetching achievements:', err));
-  }, []);
+  const { achievements, loading } = useAchievements();
 
+  console.log('loading', loading);
   console.log('achievements', achievements);
 
   const [achievementVisible, setAchievementVisible] = useState(false);
