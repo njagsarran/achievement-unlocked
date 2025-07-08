@@ -1,9 +1,8 @@
-import React from 'react';
-import './Achievement.css';
+import styles from './Achievement.module.scss';
 
 const Achievement = ({ description, title, value }) => {
   return (
-    <div className="wrapper">
+    <div className={styles.wrapper}>
       {`Achievement Unlocked: ${title}`}
       <br/>
       {`${value}G - ${description}`}

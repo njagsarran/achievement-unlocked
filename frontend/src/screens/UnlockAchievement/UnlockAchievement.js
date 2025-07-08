@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './UnlockAchievement.css';
+import styles from './UnlockAchievement.module.scss';
 import { Achievement, Button } from '../../components';
 import { useAchievements } from '../../hooks';
 
@@ -13,7 +13,7 @@ const UnlockAchievement = () => {
   const [currentAchievement, setCurrentAchievement] = useState();
 
   return (
-    <div className="UnlockAchievement">
+    <div className={styles.wrapper}>
       <div style={{ padding: 10 }} />
       <Button
         label="Unlock Achievement"

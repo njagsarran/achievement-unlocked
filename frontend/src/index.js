@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './index.css';
+import './styles/index.scss';
 import { UnlockAchievement, ViewAchievements } from './screens';
 import reportWebVitals from './reportWebVitals';
 
