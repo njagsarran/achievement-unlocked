@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './styles/index.scss';
+import { Navigation } from './components';
 import { UnlockAchievement, ViewAchievements } from './screens';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,6 +10,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
+      <Navigation />
       <Routes>
         <Route path="/achievement-unlocked" element={<UnlockAchievement />} />
         <Route path="/achievements" element={<ViewAchievements />} />
