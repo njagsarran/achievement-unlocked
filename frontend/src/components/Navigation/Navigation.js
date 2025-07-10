@@ -3,7 +3,7 @@ import styles from './Navigation.module.scss';
 
 const Navigation = () => {
   const location = useLocation();
-  const path = location.pathname;
+  const path = location.pathname.replace(/\/+$/, '');
 
   return (
     <div className={styles.wrapper}>
